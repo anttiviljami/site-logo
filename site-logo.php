@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Site Logo
- * Plugin URI: http://wordpress.com
+ * Plugin URI: https://github.com/anttiviljami/wp-site-logo
  * Description: Add a logo to your WordPress site. Set it once, and all themes that support it will display it automatically.
  * Author: Automattic
  * Version: 1.0

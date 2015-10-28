@@ -14,7 +14,7 @@ This plugin is for themes that don't want to require all of Jetpack, but still w
 
 ## Installation
 
-1. Upload the `site-logo` folder to the `/wp-content/plugins/` directory, or check out the plugin from GitHub: `git clone git@github.com:Automattic/site-logo.git`.
+1. Upload the `site-logo` folder to the `/wp-content/plugins/` directory, or check out the plugin from GitHub: `git clone git@github.com:anttiviljami/wp-site-logo.git`.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Add support by adding `add_theme_support( 'site-logo' );` to the theme's setup function.
 4. Use the `the_site_logo()` template tag in `header.php` to display the logo on the front-end.
