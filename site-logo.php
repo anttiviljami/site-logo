@@ -15,16 +15,20 @@
  * Activate the Site Logo plugin.
  *
  * @uses current_theme_supports()
- * @since 1.0
+ * @since 3.2
  */
 function site_logo_init() {
-	// Only load our code if our theme declares support for site logos.
-	if ( current_theme_supports( 'site-logo' ) ) {
-		// Load our class for namespacing.
-		require( dirname( __FILE__ ) . '/inc/class-site-logo.php' );
+  // Only load our code if our theme declares support, and the standalone plugin is not activated.
+  if ( current_theme_supports( 'site-logo' ) && ! class_exists( 'Site_Logo', false ) ) {
+    // Load our class for namespacing.
+    require( dirname( __FILE__ ) . '/inc/class-site-logo.php' );
 
-		// Load template tags.
-		require( dirname( __FILE__ ) . '/inc/functions.php' );
-	}
+    // Load template tags.
+    require( dirname( __FILE__ ) . '/inc/functions.php' );
+
+    // Load backwards-compatible template tags.
+    require( dirname( __FILE__ ) . '/inc/compat.php' );
+  }
 }
 add_action( 'init', 'site_logo_init' );
+

@@ -2,7 +2,7 @@
 /**
  * Custom logo uploader control for the Customizer.
  *
- * @package Site_Logo
+ * @package Jetpack
  */
 class Site_Logo_Image_Control extends WP_Customize_Control {
 	/**
@@ -16,12 +16,12 @@ class Site_Logo_Image_Control extends WP_Customize_Control {
 	public function __construct( $wp_customize, $control_id, $args = array() ) {
 		// declare these first so they can be overridden
 		$this->l10n = array(
-			'upload' =>      __( 'Add logo' ),
-			'set' =>         __( 'Set as logo' ),
-			'choose' =>      __( 'Choose logo' ),
-			'change' =>      __( 'Change logo' ),
-			'remove' =>      __( 'Remove logo' ),
-			'placeholder' => __( 'No logo set' ),
+			'upload' =>      __( 'Add logo', 'jetpack' ),
+			'set' =>         __( 'Set as logo', 'jetpack' ),
+			'choose' =>      __( 'Choose logo', 'jetpack' ),
+			'change' =>      __( 'Change logo', 'jetpack' ),
+			'remove' =>      __( 'Remove logo', 'jetpack' ),
+			'placeholder' => __( 'No logo set', 'jetpack' ),
 		);
 
 		parent::__construct( $wp_customize, $control_id, $args );
@@ -41,11 +41,6 @@ class Site_Logo_Image_Control extends WP_Customize_Control {
 	 * The type of files that should be allowed by the media modal.
 	 */
 	public $mime_type = 'image';
-
-	/**
-	 * Allow for custom control descriptions.
-	 */
-	public $description = '';
 
 	/**
 	 * Enqueue our media manager resources, scripts, and styles.
